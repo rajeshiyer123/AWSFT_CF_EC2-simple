@@ -15,7 +15,9 @@ To use this template, you will need to point to it with CloudFormation. CloudFor
 Why are there no comments? *JSON does not offer comments built in. Unfortunately this means that using the JSON standard, comments cannot be included.*
 
 Oh. Is there any way around that? *Yes. 2 I have found follow.*
+
 1. https://aws.amazon.com/blogs/devops/adding-comments-inside-aws-cloudformation-templates/ - a kludgy hack...
+
 2. Switch to YAML instead, which does support comments
 
 
