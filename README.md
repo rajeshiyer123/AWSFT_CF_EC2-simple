@@ -11,7 +11,7 @@ Use this template with AWS CloudFormation to launch a Free Tier EC2 instance.
 
 To use this template, you will need to point to it with CloudFormation. CloudFormation will then make use of the JSON information to configure and deploy AWS infrastructure.
 
-# FAQ
+## FAQ
 
 **Why are there no comments?**
 
