@@ -1,4 +1,4 @@
-# AWS_CloudFormation_EC2-simple template
+# AWS Free Tier CloudFormation EC2-simple instance template
 
 A CloudFormation simple EC2 instance template - Provided for demonstration.
 
@@ -12,13 +12,18 @@ Use this template with AWS CloudFormation to launch a Free Tier EC2 instance.
 To use this template, you will need to point to it with CloudFormation. CloudFormation will then make use of the JSON information to configure and deploy AWS infrastructure.
 
 # FAQ
-Why are there no comments? *JSON does not offer comments built in. Unfortunately this means that using the JSON standard, comments cannot be included.*
 
-Oh. Is there any way around that? *Yes. 2 I have found follow.*
+**Why are there no comments?**
+
+*JSON does not offer comments built in. Unfortunately this means that using the JSON standard, comments cannot be included.*
+
+**Oh. Is there any way around that?**
+
+*Yes. 2 I have found follow.*
 
 1. https://aws.amazon.com/blogs/devops/adding-comments-inside-aws-cloudformation-templates/ - a kludgy hack...
 
-2. Switch to YAML instead, which does support comments
+2. Switch to YAML instead for your templates, which does support comments
 
 
 **Contents:**
