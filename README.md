@@ -32,7 +32,7 @@ To use this template, you will need to point to it with CloudFormation. CloudFor
 2. Specify your EC2 instance KeyPair in the template file AWS_CF_EC2-simple.template for the resource key "KeyName" eg:
 
         "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ],
-        "KeyName" : { "Ref" : "KeyName" },
+        "KeyName" : "My_EC2_KeyName",
         "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" "AWS::Region" },
 
 Once these requirements are met you can upload this template to CloudFormation.
