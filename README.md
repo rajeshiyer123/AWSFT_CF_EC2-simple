@@ -21,12 +21,25 @@ To use this template, you will need to point to it with CloudFormation. CloudFor
 
 *Yes. 2 I have found follow.*
 
-1. https://aws.amazon.com/blogs/devops/adding-comments-inside-aws-cloudformation-templates/ - a kludgy hack...
+  1. https://aws.amazon.com/blogs/devops/adding-comments-inside-aws-cloudformation-templates/ - a kludgy hack...
 
-2. Switch to YAML instead for your templates, which does support comments
+  2. Switch to YAML instead for your templates, which does support comments
 
+**Requirements for deployment**
 
-**Contents:**
+1. An EC2 KeyPair to associate with the deployment (so you can access the instance at the console/prompt over SSH).
+
+2. Specify your EC2 instance KeyPair in the template file AWS_CF_EC2-simple.template for the resource key "KeyName" eg:
+
+        "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ],
+        "KeyName" : { "Ref" : "KeyName" },
+        "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" "AWS::Region" },
+
+Once these requirements are met you can upload this template to CloudFormation.
+
+Please report any bugs.
+
+**Contents of Repository:**
 * LICENSE - Apache License (for information only)
 * README.md - This file (for information only)
 * AWS_CF_EC2-simple.template - A JSON formatted template file specifying AWS infrastructure and further configuration instructions to be consumed by CloudFormation to create and configure a deployment
